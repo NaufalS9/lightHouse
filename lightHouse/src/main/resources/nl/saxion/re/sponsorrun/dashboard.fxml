@@ -7,6 +7,7 @@
             xmlns="http://javafx.com/javafx/17.0.12"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="nl.saxion.re.sponsorrun.controllers.DashboardController">
+
     <top>
         <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-background-color: #34495E; -fx-padding: 10;">
             <Label style="-fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold;" text="Lighthouse" />
@@ -16,38 +17,16 @@
     </top>
 
     <center>
-        <VBox fx:id="tournamentListBox" alignment="TOP_CENTER" spacing="10.0" style="-fx-padding: 10;">
-            <!-- Action Buttons -->
+        <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-padding: 10;">
             <HBox alignment="CENTER" spacing="10.0">
                 <Button onAction="#onCreateTournament" style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="Create Tournament" />
                 <Button style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="Options" />
             </HBox>
 
-            <VBox spacing="10.0">
-                <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Upcoming Tournaments" />
-                <HBox alignment="CENTER" spacing="10.0">
-                    <!-- Tournament Cards -->
-                    <VBox spacing="5.0" style="-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-padding: 10; -fx-background-color: #ECF0F1;">
-                        <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="KFC Cup" />
-                        <Label text="Football - Apeldoorn" />
-                        <Label text="09-01-2003" />
-                    </VBox>
-               <VBox layoutX="239.0" layoutY="10.0" spacing="5.0" style="-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-padding: 10; -fx-background-color: #ECF0F1;">
-                  <children>
-                     <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="KFC Cup" />
-                     <Label text="Football - Apeldoorn" />
-                     <Label text="09-01-2003" />
-                  </children>
-               </VBox>
-               <VBox layoutX="262.0" layoutY="10.0" spacing="5.0" style="-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-padding: 10; -fx-background-color: #ECF0F1;">
-                  <children>
-                     <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="KFC Cup" />
-                     <Label text="Football - Apeldoorn" />
-                     <Label text="09-01-2003" />
-                  </children>
-               </VBox>
-                </HBox>
-            </VBox>
+            <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Upcoming Tournaments" />
+
+            <VBox fx:id="tournamentListBox" spacing="10.0" />
         </VBox>
     </center>
 </BorderPane>
+

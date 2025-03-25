@@ -27,23 +27,19 @@ public class CreateTournamentController {
 
     @FXML
     private void onSubmitButton() {
-        // Get input values
         String name = tournamentNameField.getText();
         String date = (datePicker.getValue() != null) ? datePicker.getValue().toString() : "No Date";
         String venue = venueField.getText();
         String sport = sportTypeBox.getValue();
         String format = matchFormatBox.getValue();
 
-        // Validate input
         if (name.isEmpty() || venue.isEmpty() || sport == null || format == null) {
             System.out.println("Please fill all fields!");
             return;
         }
 
-        // Save tournament and update Dashboard
         DashboardController.addTournament(name, sport, venue, date);
 
-        // Go back to the Dashboard
         WindowHelper.openWindow("dashboard.fxml", "Dashboard", 800, 600);
     }
 }

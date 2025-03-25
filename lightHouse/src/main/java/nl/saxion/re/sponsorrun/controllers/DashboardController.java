@@ -25,7 +25,7 @@ public class DashboardController {
     }
 
     private void updateTournamentList() {
-        tournamentListBox.getChildren().clear(); // Clear old data
+        tournamentListBox.getChildren().clear();
 
         for (String[] t : tournaments) {
             VBox tournamentCard = new VBox();
@@ -33,9 +33,9 @@ public class DashboardController {
             tournamentCard.setSpacing(5);
 
             tournamentCard.getChildren().addAll(
-                    new Label(t[0]), // Tournament Name
-                    new Label(t[1] + " - " + t[2]), // Sport & Venue
-                    new Label(t[3]) // Date
+                    new Label(t[0]),
+                    new Label(t[1] + " - " + t[2]),
+                    new Label(t[3])
             );
 
             tournamentListBox.getChildren().add(tournamentCard);
