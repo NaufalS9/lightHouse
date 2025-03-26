@@ -34,7 +34,7 @@ public class CreateTournamentController {
         String format = matchFormatBox.getValue();
 
         if (name.isEmpty() || venue.isEmpty() || sport == null || format == null) {
-            System.out.println("Please fill all fields!");
+            System.err.println("Please fill all fields!");
             return;
         }
 

@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4b523e05-e1f7-410f-9406-2dfa6bafd14f" name="Changes" comment="added dashboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/CreateTournamentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/CreateTournamentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nl/saxion/re/sponsorrun/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nl/saxion/re/sponsorrun/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/saxion/re/sponsorrun/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/saxion/re/sponsorrun/dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,22 +48,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.SponsorRunApp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;U0-createTournament&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/naufa/Documents/School/Saxion/IADS/exam_iad_2324/exam_iad_2324&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.SponsorRunApp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "U0-createTournament",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/naufa/Downloads/INT04/Prototype/Prototyping-JavaFX NEW",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="lightHouse" />
@@ -102,7 +101,8 @@
       <workItem from="1742373914033" duration="907000" />
       <workItem from="1742374830673" duration="1878000" />
       <workItem from="1742376721400" duration="5885000" />
-      <workItem from="1742897205078" duration="7002000" />
+      <workItem from="1742897205078" duration="7995000" />
+      <workItem from="1742976579527" duration="936000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -136,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742376952200</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added dashboard">
+      <option name="closed" value="true" />
+      <created>1742910833554</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1742910833555</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
