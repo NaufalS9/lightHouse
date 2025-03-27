@@ -41,7 +41,7 @@ public class CreateTournamentController {
             return;
         }
 
-        DashboardController.addTournament(name, sport, venue, date);
+        DashboardController.addTournament(name, sport, venue, date, format);
 
         showAlert(Alert.AlertType.INFORMATION, "Success", "Tournament added successfully!");
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500" prefWidth="800" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.saxion.re.sponsorrun.controllers.DetailPageController">
+
+    <VBox alignment="CENTER" layoutX="50" layoutY="20" prefWidth="700" spacing="20">
+        <Label style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #2c3e50; -fx-padding: 10px;" text="Lighthouse" />
+
+        <VBox spacing="15" style="-fx-padding: 10px;">
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #34495e;" text="Tournament Information" />
+
+            <GridPane hgap="20" prefHeight="80.0" prefWidth="655.0" vgap="10">
+                <!-- Tournament Name -->
+                <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #7f8c8d;" text="Tournament Name:" />
+                <Label fx:id="tournamentNameLabel" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;" GridPane.columnIndex="1" />
+
+                <!-- Sport Type -->
+                <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #7f8c8d;" text="Sport Type:" GridPane.rowIndex="1" />
+                <Label fx:id="sportTypeLabel" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <!-- Match Format -->
+                <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #7f8c8d;" text="Match Format:" GridPane.rowIndex="1" GridPane.columnIndex="2" />
+                <Label fx:id="matchFormatLabel" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;" GridPane.rowIndex="1" GridPane.columnIndex="3" />
+
+                <!-- Date -->
+                <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #7f8c8d;" text="Date:" GridPane.rowIndex="2" />
+                <Label fx:id="dateLabel" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <!-- Venue -->
+                <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #7f8c8d;" text="Venue:" GridPane.rowIndex="2" GridPane.columnIndex="2" />
+                <Label fx:id="venueLabel" style="-fx-font-size: 14px; -fx-text-fill: #2c3e50;" GridPane.rowIndex="2" GridPane.columnIndex="3" />
+
+                <columnConstraints>
+                    <ColumnConstraints minWidth="120.0" />
+                    <ColumnConstraints maxWidth="195.0" minWidth="123.0" prefWidth="143.0" />
+                    <ColumnConstraints maxWidth="197.0" minWidth="120.0" prefWidth="142.33330281575525" />
+                    <ColumnConstraints maxWidth="223.00003051757812" minWidth="175.0" prefWidth="223.00003051757812" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+            </GridPane>
+        </VBox>
+
+        <!-- Teams Section -->
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #34495e;" text="Teams" />
+            <Button text="Add Team" onAction="#onAddTeam" />
+        </HBox>
+
+        <TableView fx:id="teamsTable" prefHeight="221.0" prefWidth="700.0">
+            <columns>
+                <TableColumn fx:id="schoolColumn" text="School" prefWidth="140"/>
+                <TableColumn fx:id="teamColumn" text="Team Name" prefWidth="140"/>
+                <TableColumn fx:id="contactColumn" text="Contact Person" prefWidth="140"/>
+                <TableColumn fx:id="phoneColumn" text="Phone Number" prefWidth="140"/>
+                <TableColumn fx:id="addressColumn" text="Address" prefWidth="140"/>
+            </columns>
+        </TableView>
+    </VBox>
+</AnchorPane>

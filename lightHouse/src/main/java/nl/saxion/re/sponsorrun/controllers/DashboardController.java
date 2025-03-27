@@ -1,10 +1,14 @@
 package nl.saxion.re.sponsorrun.controllers;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
-import nl.saxion.re.sponsorrun.util.WindowHelper;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +19,8 @@ public class DashboardController {
 
     private static final List<String[]> tournaments = new ArrayList<>();
 
-    public static void addTournament(String name, String sport, String venue, String date) {
-        tournaments.add(new String[]{name, sport, venue, date});
+    public static void addTournament(String name, String sport, String venue, String date, String format) {
+        tournaments.add(new String[]{name, sport, venue, date, format});
     }
 
     @FXML
@@ -32,23 +36,44 @@ public class DashboardController {
             tournamentCard.setStyle("-fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-padding: 10; -fx-background-color: #ECF0F1;");
             tournamentCard.setSpacing(5);
 
-            tournamentCard.getChildren().addAll(
-                    new Label(t[0]),
-                    new Label(t[1] + " - " + t[2]),
-                    new Label(t[3])
-            );
+            Label nameLabel = new Label(t[0]);
+            Label detailsLabel = new Label(t[1] + " - " + t[2]);
+            Label dateLabel = new Label(t[3]);
+
+            tournamentCard.getChildren().addAll(nameLabel, detailsLabel, dateLabel);
+
+            tournamentCard.setOnMouseClicked(event -> openDetailPage(t));
 
             tournamentListBox.getChildren().add(tournamentCard);
         }
     }
 
-    @FXML
-    private void onCreateTournament() {
-        WindowHelper.openWindow("create-teams.fxml", "Create teams", 800, 600);
+    private void openDetailPage(String[] tournamentDetails) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/nl/saxion/re/sponsorrun/detail-page.fxml"));
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.load(), 800, 600));
+
+            DetailPageController controller = loader.getController();
+            controller.setTournamentDetails(tournamentDetails);
+
+            stage.setTitle("Tournament Details");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
-    private void handleOptions() {
-        System.out.println("Options button clicked!");
+    private void onCreateTournament() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/nl/saxion/re/sponsorrun/create-tournament.fxml"));
+            Stage stage = new Stage();
+            stage.setScene(new Scene(loader.load(), 800, 600));
+            stage.setTitle("Create Tournament");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
