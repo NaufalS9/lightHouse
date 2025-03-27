@@ -44,7 +44,7 @@ public class DashboardController {
 
     @FXML
     private void onCreateTournament() {
-        WindowHelper.openWindow("create-tournament.fxml", "Create tournament", 800, 600);
+        WindowHelper.openWindow("create-teams.fxml", "Create teams", 800, 600);
     }
 
     @FXML
