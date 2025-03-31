@@ -3,6 +3,7 @@ package nl.saxion.re.sponsorrun.controllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import nl.saxion.re.sponsorrun.TeamDataManager;
 import nl.saxion.re.sponsorrun.util.WindowHelper;
 
 public class CreateTournamentController {
@@ -47,12 +48,24 @@ public class CreateTournamentController {
             return;
         }
 
+        TeamDataManager.getInstance().setCurrentTournament(name);
+        TeamDataManager.getInstance().clearTeamsForTournament();
+
         DashboardController.addTournament(name, sport, venue, date, format);
 
         showAlert(Alert.AlertType.INFORMATION, "Success", "Tournament added successfully!");
 
-        WindowHelper.openWindow("dashboard.fxml", "Dashboard", 800, 600);
+        Stage currentStage = (Stage) button.getScene().getWindow();
+        currentStage.close();
+
+        try {
+            WindowHelper.openWindow("/nl/saxion/re/sponsorrun/dashboard.fxml", "Dashboard", 800, 600);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
+
 
     private void showAlert(Alert.AlertType type, String title, String message) {
         Alert alert = new Alert(type);

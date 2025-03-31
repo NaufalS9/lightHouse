@@ -62,11 +62,16 @@ public class DashboardController {
             controller.setTournamentDetails(tournamentDetails);
 
             stage.setTitle("Tournament Details");
+
+            Stage currentStage = (Stage) button.getScene().getWindow();
+            currentStage.close();
+
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
     @FXML
     private void onCreateTournament() {
