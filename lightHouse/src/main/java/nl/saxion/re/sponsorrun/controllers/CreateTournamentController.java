@@ -1,13 +1,15 @@
 package nl.saxion.re.sponsorrun.controllers;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.stage.Stage;
+import nl.saxion.re.sponsorrun.TeamDataManager;
 import nl.saxion.re.sponsorrun.util.WindowHelper;
 
 public class CreateTournamentController {
+
+    @FXML
+    private Button button;
 
     @FXML
     private TextField tournamentNameField, venueField;
@@ -25,8 +27,13 @@ public class CreateTournamentController {
 
     @FXML
     private void onBackButton() {
-        WindowHelper.openWindow("dashboard.fxml", "Dashboard", 800, 600);
-    }
+        try {
+            WindowHelper.openWindow("/nl/saxion/re/sponsorrun/dashboard.fxml",
+                    "Dashboard", 800, 600,
+                    (Stage) button.getScene().getWindow());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }    }
 
     @FXML
     private void onSubmitButton() {
@@ -41,12 +48,24 @@ public class CreateTournamentController {
             return;
         }
 
-        DashboardController.addTournament(name, sport, venue, date);
+        TeamDataManager.getInstance().setCurrentTournament(name);
+        TeamDataManager.getInstance().clearTeamsForTournament();
+
+        DashboardController.addTournament(name, sport, venue, date, format);
 
         showAlert(Alert.AlertType.INFORMATION, "Success", "Tournament added successfully!");
 
-        WindowHelper.openWindow("dashboard.fxml", "Dashboard", 800, 600);
+        Stage currentStage = (Stage) button.getScene().getWindow();
+        currentStage.close();
+
+        try {
+            WindowHelper.openWindow("/nl/saxion/re/sponsorrun/dashboard.fxml", "Dashboard", 800, 600);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
+
 
     private void showAlert(Alert.AlertType type, String title, String message) {
         Alert alert = new Alert(type);

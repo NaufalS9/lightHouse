@@ -22,8 +22,8 @@
         </VBox>
 
         <HBox spacing="20">
-            <Button onAction="#onBackButton" prefWidth="100" text="Back" />
-            <Button onAction="#onSubmitButton" prefWidth="100" text="Submit" />
+            <Button fx:id="backButton" onAction="#onBackButton" prefWidth="100" text="Back" />
+            <Button fx:id="submitButton" onAction="#onSubmitButton" prefWidth="100" text="Submit" />
         </HBox>
     </VBox>
 </AnchorPane>
