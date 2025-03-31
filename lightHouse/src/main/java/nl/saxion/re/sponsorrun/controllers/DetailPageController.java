@@ -8,6 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.Label;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import nl.saxion.re.sponsorrun.util.WindowHelper;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -64,29 +65,26 @@ public class DetailPageController {
     @FXML
     private void onAddTeam() {
         try {
-            // Load the Create Team view
+            WindowHelper.openWindow("/nl/saxion/re/sponsorrun/create-teams.fxml",
+                    "Create Team", 800, 600); // Specify dimensions as needed
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/nl/saxion/re/sponsorrun/create-teams.fxml"));
             Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load()));
-            stage.setTitle("Create Team");
+            stage.setScene(new Scene(loader.load(), 800, 600));
+            CreateTeamsController controller = loader.getController();
+            controller.setDetailPageController(this); // Inject the current instance of DetailPageController
             stage.show();
 
-            // Pass this controller to the CreateTeamsController
-            CreateTeamsController controller = loader.getController();
-            controller.setDetailPageController(this);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     public void addTeam(String school, String teamName, String contactPerson, String phoneNumber, String address) {
-        // Create a new Team object
         Team team = new Team(school, teamName, contactPerson, phoneNumber, address);
 
-        // Add the team to the list
         teams.add(team);
 
-        // Update the TableView
         teamsTable.getItems().add(team);
     }
 

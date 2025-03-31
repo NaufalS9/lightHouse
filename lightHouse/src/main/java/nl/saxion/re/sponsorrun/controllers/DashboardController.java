@@ -3,16 +3,20 @@ package nl.saxion.re.sponsorrun.controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import nl.saxion.re.sponsorrun.util.WindowHelper;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DashboardController {
+    @FXML
+    private Button button;
 
     @FXML
     private VBox tournamentListBox;
@@ -67,12 +71,10 @@ public class DashboardController {
     @FXML
     private void onCreateTournament() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/nl/saxion/re/sponsorrun/create-tournament.fxml"));
-            Stage stage = new Stage();
-            stage.setScene(new Scene(loader.load(), 800, 600));
-            stage.setTitle("Create Tournament");
-            stage.show();
-        } catch (IOException e) {
+            WindowHelper.openWindow("/nl/saxion/re/sponsorrun/create-tournament.fxml",
+                    "Create Tournament", 800, 600,
+                    (Stage) button.getScene().getWindow());
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

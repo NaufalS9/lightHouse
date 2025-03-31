@@ -19,7 +19,7 @@
     <center>
         <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-padding: 10;">
             <HBox alignment="CENTER" spacing="10.0">
-                <Button onAction="#onCreateTournament" style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="Create Tournament" />
+                <Button fx:id="button" onAction="#onCreateTournament" style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="Create Tournament" />
                 <Button style="-fx-background-color: #3498DB; -fx-text-fill: white;" text="Options" />
             </HBox>
 

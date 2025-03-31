@@ -23,7 +23,7 @@
         </VBox>
 
         <HBox spacing="20">
-            <Button onAction="#onBackButton" prefWidth="100" text="Back" />
+            <Button fx:id="button" onAction="#onBackButton" prefWidth="100" text="Back" />
             <Button onAction="#onSubmitButton" prefWidth="100" text="Submit" />
         </HBox>
     </VBox>

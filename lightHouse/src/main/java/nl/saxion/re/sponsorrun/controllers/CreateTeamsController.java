@@ -23,8 +23,13 @@ public class CreateTeamsController {
 
     @FXML
     private void onBackButton() {
-        Stage stage = (Stage) backButton.getScene().getWindow();
-        stage.close();
+        try {
+            WindowHelper.openWindow("/nl/saxion/re/sponsorrun/detail-page.fxml",
+                    "Detail page", 800, 600,
+                    (Stage) backButton.getScene().getWindow());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
