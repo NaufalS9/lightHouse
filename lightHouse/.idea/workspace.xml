@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b523e05-e1f7-410f-9406-2dfa6bafd14f" name="Changes" comment="fix detailpage">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/nl/saxion/re/sponsorrun/login.fxml" afterDir="false" />
+    <list default="true" id="4b523e05-e1f7-410f-9406-2dfa6bafd14f" name="Changes" comment="change password">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/SponsorRunApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/SponsorRunApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/CreateTeamsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/CreateTeamsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/DashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/nl/saxion/re/sponsorrun/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nl/saxion/re/sponsorrun/dashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/saxion/re/sponsorrun/SponsorRunApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/saxion/re/sponsorrun/SponsorRunApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/nl/saxion/re/sponsorrun/controllers/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/saxion/re/sponsorrun/controllers/DashboardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/saxion/re/sponsorrun/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/saxion/re/sponsorrun/dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +114,7 @@
       <workItem from="1742985161350" duration="2839000" />
       <workItem from="1743418357611" duration="6708000" />
       <workItem from="1743497960132" duration="3960000" />
-      <workItem from="1743528811019" duration="5235000" />
+      <workItem from="1743528811019" duration="6896000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -170,7 +164,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743422359738</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added login page">
+      <option name="closed" value="true" />
+      <created>1743534367218</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743534367218</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change password">
+      <option name="closed" value="true" />
+      <created>1743534708735</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743534708735</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +191,8 @@
     <MESSAGE value="added dashboard" />
     <MESSAGE value="added createTeams" />
     <MESSAGE value="fix detailpage" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix detailpage" />
+    <MESSAGE value="added login page" />
+    <MESSAGE value="change password" />
+    <option name="LAST_COMMIT_MESSAGE" value="change password" />
   </component>
 </project>
