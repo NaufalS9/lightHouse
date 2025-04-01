@@ -23,7 +23,7 @@ public class LoginController {
         String username = usernameField.getText().trim();
         String password = passwordField.getText().trim();
 
-        if ("admin".equals(username) && "SUCCESSefforts".equals(password)) {
+        if ("admin".equals(username) && "admin123".equals(password)) {
             try {
                 WindowHelper.openWindow("/nl/saxion/re/sponsorrun/dashboard.fxml",
                         "Dashboard", 800, 600,
