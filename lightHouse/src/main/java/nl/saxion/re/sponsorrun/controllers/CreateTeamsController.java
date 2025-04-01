@@ -43,7 +43,7 @@ public class CreateTeamsController {
         }
 
         if (!phoneNumber.matches("\\d{10}")) {
-            showAlert(Alert.AlertType.ERROR, "Validation Error", "Please enter a valid 10-digit phone number!");
+            showAlert(Alert.AlertType.ERROR, "Validation Error", "Please enter a valid 10 digit phone number!");
             return;
         }
 

@@ -23,6 +23,20 @@ public class DashboardController {
 
     private static final List<String[]> tournaments = new ArrayList<>();
 
+    @FXML
+    private Button logoutButton;
+
+    @FXML
+    private void onLogout() {
+        try {
+            WindowHelper.openWindow("/nl/saxion/re/sponsorrun/login.fxml",
+                    "Login", 800, 600,
+                    (Stage) logoutButton.getScene().getWindow());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void addTournament(String name, String sport, String venue, String date, String format) {
         tournaments.add(new String[]{name, sport, venue, date, format});
     }

@@ -15,7 +15,7 @@ public class SponsorRunApp extends Application {
         Data.updateFromDisk();
 
         // start the main menu window
-        WindowHelper.openWindow("dashboard.fxml", "LightHouse", 800, 600, stage);
+        WindowHelper.openWindow("login.fxml", "LightHouse", 800, 600, stage);
     }
 
     public static void main(String[] args) {
