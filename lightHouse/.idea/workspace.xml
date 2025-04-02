@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b523e05-e1f7-410f-9406-2dfa6bafd14f" name="Changes" comment="fix detailpage">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/TeamDataManager.java" afterDir="false" />
+    <list default="true" id="4b523e05-e1f7-410f-9406-2dfa6bafd14f" name="Changes" comment="change password">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/data/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/CreateTeamsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/CreateTeamsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/CreateTournamentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/CreateTournamentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/DetailPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/DetailPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/nl/saxion/re/sponsorrun/detail-page.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nl/saxion/re/sponsorrun/detail-page.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/saxion/re/sponsorrun/controllers/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/nl/saxion/re/sponsorrun/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/nl/saxion/re/sponsorrun/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/saxion/re/sponsorrun/controllers/DashboardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/saxion/re/sponsorrun/controllers/DashboardController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,25 +51,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.SponsorRunApp.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;detailPage&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/naufa/Downloads/INT04/Prototype/Prototyping-JavaFX NEW&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.SponsorRunApp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "login-page",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/naufa/Documents/School/Saxion/OOP/HotelManager/HotelManager",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="nl.saxion.re.sponsorrun" />
@@ -116,6 +113,8 @@
       <workItem from="1742976579527" duration="936000" />
       <workItem from="1742985161350" duration="2839000" />
       <workItem from="1743418357611" duration="6708000" />
+      <workItem from="1743497960132" duration="3960000" />
+      <workItem from="1743528811019" duration="6896000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <option name="closed" value="true" />
@@ -165,7 +164,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743422359738</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added login page">
+      <option name="closed" value="true" />
+      <created>1743534367218</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743534367218</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change password">
+      <option name="closed" value="true" />
+      <created>1743534708735</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743534708735</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +191,8 @@
     <MESSAGE value="added dashboard" />
     <MESSAGE value="added createTeams" />
     <MESSAGE value="fix detailpage" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix detailpage" />
+    <MESSAGE value="added login page" />
+    <MESSAGE value="change password" />
+    <option name="LAST_COMMIT_MESSAGE" value="change password" />
   </component>
 </project>
