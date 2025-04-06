@@ -29,15 +29,12 @@ public class WindowHelper {
      * @param stage (optional) stage if you already have one
      */
     public static void openWindow(String fxmlResource, String title, int width, int height, Stage stage) {
-
         FXMLLoader fxmlLoader = new FXMLLoader(SponsorRunApp.class.getResource(fxmlResource));
         try {
-
             var scene = new Scene(fxmlLoader.load(), width, height);
             stage.setTitle(title);
             stage.setScene(scene);
             stage.show();
-
         } catch (Exception e) {
             showAlert("Error opening window for " + fxmlResource + ".\n\n" + e, Alert.AlertType.ERROR);
         }
